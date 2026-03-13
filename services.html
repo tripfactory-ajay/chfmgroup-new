@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | CHFM Group</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        chfm: {
+                            black: '#0a0a0a',
+                            dark: '#1a1a1a',
+                            red: '#dc2626',
+                            redLight: '#ef4444',
+                            redDark: '#991b1b',
+                            gray: '#262626',
+                            light: '#f5f5f5'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #dc2626;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+        .service-card { transition: all 0.3s ease; }
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: #dc2626;
+        }
+    </style>
+</head>
+<body class="bg-chfm-black text-gray-100 font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-chfm-black/95 backdrop-blur-md border-b border-chfm-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-chfm-red to-chfm-redDark rounded-lg flex items-center justify-center shadow-lg shadow-chfm-red/20">
+                        <span class="text-white font-black text-xl">CH</span>
+                    </div>
+                    <div>
+                        <span class="text-2xl font-black text-white tracking-tight">CHFM</span>
+                        <span class="text-chfm-red font-semibold ml-1">GROUP</span>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-300 font-medium hover:text-chfm-red transition">Home</a>
+                    <a href="about.html" class="nav-link text-gray-300 font-medium hover:text-chfm-red transition">About Us</a>
+                    <a href="services.html" class="nav-link text-white font-medium hover:text-chfm-red transition">Services</a>
+                    <a href="sectors.html" class="nav-link text-gray-300 font-medium hover:text-chfm-red transition">Sectors</a>
+                    <a href="sustainability.html" class="nav-link text-gray-300 font-medium hover:text-chfm-red transition">Sustainability</a>
+                    <a href="contact.html" class="bg-chfm-red hover:bg-chfm-redDark text-white px-6 py-3 rounded-lg font-semibold transition-all transform hover:scale-105 shadow-lg shadow-chfm-red/25">
+                        Contact Us
+                    </a>
+                </div>
+
+                <button class="md:hidden text-white" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-chfm-dark border-t border-chfm-gray">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="index.html" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-chfm-gray rounded">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-chfm-gray rounded">About Us</a>
+                <a href="services.html" class="block px-3 py-2 text-white font-medium hover:bg-chfm-gray rounded">Services</a>
+                <a href="sectors.html" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-chfm-gray rounded">Sectors</a>
+                <a href="sustainability.html" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-chfm-gray rounded">Sustainability</a>
+                <a href="contact.html" class="block px-3 py-2 text-chfm-red font-semibold">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-20 bg-chfm-dark relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-chfm-black to-chfm-dark"></div>
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-chfm-red/10 to-transparent"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <h1 class="text-5xl lg:text-6xl font-black text-white mb-6">Services We <span class="gradient-text">Offer</span></h1>
+                <div class="w-24 h-1 bg-gradient-to-r from-chfm-red to-chfm-redDark rounded mb-8"></div>
+                <p class="text-xl text-gray-400 leading-relaxed">
+                    At CHFM Group, we specialise in providing comprehensive facilities management solutions tailored to the specific needs of local authorities and housing associations.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Services -->
+    <section class="py-20 bg-chfm-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 mb-20">
+                <div class="service-card bg-chfm-dark border border-chfm-gray rounded-2xl overflow-hidden">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&h=500&fit=crop" alt="Comprehensive FM" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <h2 class="text-2xl font-bold text-white mb-4">Comprehensive Facilities Management and Maintenance</h2>
+                        <p class="text-gray-400 leading-relaxed mb-6">
+                            At CHFM Group, we provide end-to-end facilities management services, ensuring the smooth operation and maintenance of your properties. From routine inspections and preventative maintenance to rapid response for emergency repairs, we handle all aspects of facilities management with precision and care.
+                        </p>
+                        <p class="text-gray-400 leading-relaxed">
+                            Our proactive approach guarantees that your buildings are well-maintained, compliant with regulations, and function efficiently to minimise downtime and extend the life of your assets.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service-card bg-chfm-dark border border-chfm-gray rounded-2xl overflow-hidden">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop" alt="Housing Solutions" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <h2 class="text-2xl font-bold text-white mb-4">Tailored Solutions for Housing Associations and Local Authorities</h2>
+                        <p class="text-gray-400 leading-relaxed mb-6">
+                            We understand the unique needs of housing associations and local authorities, offering bespoke facilities management services to support the day-to-day operations of residential and communal spaces.
+                        </p>
+                        <p class="text-gray-400 leading-relaxed">
+                            Our tailored solutions include tenant support, regular property inspections, and efficient management of maintenance requests. By working closely with you, we ensure that properties remain safe, secure, and comfortable, ultimately enhancing the wellbeing of tenants and residents while maintaining the value of your assets.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Energy Management -->
+            <div class="bg-gradient-to-r from-chfm-dark to-chfm-black border border-chfm-gray rounded-2xl p-8 lg:p-12 mb-20">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold text-white mb-6">Energy Management and <span class="gradient-text">Sustainability Solutions</span></h2>
+                        <p class="text-gray-400 leading-relaxed mb-6">
+                            Energy efficiency is a key focus of our services at CHFM Group. We help clients reduce energy consumption, lower operational costs, and meet sustainability targets.
+                        </p>
+                        <p class="text-gray-400 leading-relaxed mb-6">
+                            Through detailed energy audits, we identify areas for improvement and implement energy-saving measures, such as the installation of energy-efficient systems and technologies.
+                        </p>
+                        <p class="text-gray-400 leading-relaxed">
+                            Our sustainability initiatives are designed to minimise environmental impact and help you achieve a greener, more cost-effective facility.
+                        </p>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-gradient-to-r from-chfm-red to-chfm-redDark rounded-2xl opacity-20 blur-2xl"></div>
+                        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&h=600&fit=crop" alt="Energy Management" class="relative rounded-2xl shadow-2xl border border-chfm-gray w-full">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service List -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-chfm-dark border border-chfm-gray rounded-xl p-6 hover:border-chfm-red transition duration-300">
+                    <div class="w-12 h-12 bg-chfm-red/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-chfm-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Planned Maintenance</h3>
+                    <p class="text-gray-500 text-sm">Scheduled servicing and preventative maintenance to keep your assets in optimal condition.</p>
+                </div>
+
+                <div class="bg-chfm-dark border border-chfm-gray rounded-xl p-6 hover:border-chfm-red transition duration-300">
+                    <div class="w-12 h-12 bg-chfm-red/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-chfm-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Emergency Repairs</h3>
+                    <p class="text-gray-500 text-sm">24/7 rapid response service for urgent maintenance issues and emergency situations.</p>
+                </div>
+
+                <div class="bg-chfm-dark border border-chfm-gray rounded-xl p-6 hover:border-chfm-red transition duration-300">
+                    <div class="w-12 h-12 bg-chfm-red/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-chfm-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Compliance & Safety</h3>
+                    <p class="text-gray-500 text-sm">Full regulatory compliance management including gas safety, electrical testing, and fire safety.</p>
+                </div>
+
+                <div class="bg-chfm-dark border border-chfm-gray rounded-xl p-6 hover:border-chfm-red transition duration-300">
+                    <div class="w-12 h-12 bg-chfm-red/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-chfm-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Void Property Works</h3>
+                    <p class="text-gray-500 text-sm">Complete refurbishment and turnaround services for vacant properties.</p>
+                </div>
+
+                <div class="bg-chfm-dark border border-chfm-gray rounded-xl p-6 hover:border-chfm-red transition duration-300">
+                    <div class="w-12 h-12 bg-chfm-red/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-chfm-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Asset Management</h3>
+                    <p class="text-gray-500 text-sm">Strategic asset lifecycle management to maximise value and minimise costs.</p>
+                </div>
+
+                <div class="bg-chfm-dark border border-chfm-gray rounded-xl p-6 hover:border-chfm-red transition duration-300">
+                    <div class="w-12 h-12 bg-chfm-red/20 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-chfm-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Tenant Services</h3>
+                    <p class="text-gray-500 text-sm">Dedicated support services ensuring tenant satisfaction and wellbeing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gradient-to-r from-chfm-red to-chfm-redDark">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-black text-white mb-6">Ready to Get Started?</h2>
+            <p class="text-xl text-red-100 mb-8">Contact us to discuss your facilities management requirements</p>
+            <a href="contact.html" class="bg-white text-chfm-red px-8 py-4 rounded-lg font-bold text-lg transition-all transform hover:scale-105 shadow-xl inline-block">
+                Request a Quote
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-chfm-black border-t border-chfm-gray pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div class="col-span-2">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-br from-chfm-red to-chfm-redDark rounded-lg flex items-center justify-center">
+                            <span class="text-white font-black">CH</span>
+                        </div>
+                        <div>
+                            <span class="text-xl font-black text-white">CHFM</span>
+                            <span class="text-chfm-red font-semibold ml-1">GROUP</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        Trusted facilities management for local authorities and housing associations across the UK.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-chfm-red transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-chfm-red transition">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-chfm-red transition">Services</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-chfm-red transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contact</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li>Calder House, Calder Park</li>
+                        <li>Wakefield WF4 3BA</li>
+                        <li>info@chfmgroup.co.uk</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-chfm-gray pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm">&copy; 2026 CHFM Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
