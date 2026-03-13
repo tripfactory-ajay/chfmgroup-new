@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sectors | CHFM Group</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        chfm: {
+                            black: '#0a0a0a',
+                            dark: '#1a1a1a',
+                            red: '#dc2626',
+                            redLight: '#ef4444',
+                            redDark: '#991b1b',
+                            gray: '#262626',
+                            light: '#f5f5f5'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #dc2626;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+    </style>
+</head>
+<body class="bg-chfm-black text-gray-100 font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-chfm-black/95 backdrop-blur-md border-b border-chfm-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-chfm-red to-chfm-redDark rounded-lg flex items-center justify-center shadow-lg shadow-chfm-red/20">
+                        <span class="text-white font-black text-xl">CH</span>
+                    </div>
+                    <div>
+                        <span class="text-2xl font-black text-white tracking-tight">CHFM</span>
+                        <span class="text-chfm-red font-semibold ml-1">GROUP</span>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-300 font-medium hover:text-chfm-red transition">Home</a>
+                    <a href="about.html" class="nav-link text-gray-300 font-medium hover:text-chfm-red transition">About Us</a>
+                    <a href="services.html" class="nav-link text-gray-300 font-medium hover:text-chfm-red transition">Services</a>
+                    <a href="sectors.html" class="nav-link text-white font-medium hover:text-chfm-red transition">Sectors</a>
+                    <a href="sustainability.html" class="nav-link text-gray-300 font-medium hover:text-chfm-red transition">Sustainability</a>
+                    <a href="contact.html" class="bg-chfm-red hover:bg-chfm-redDark text-white px-6 py-3 rounded-lg font-semibold transition-all transform hover:scale-105 shadow-lg shadow-chfm-red/25">
+                        Contact Us
+                    </a>
+                </div>
+
+                <button class="md:hidden text-white" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-chfm-dark border-t border-chfm-gray">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="index.html" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-chfm-gray rounded">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-chfm-gray rounded">About Us</a>
+                <a href="services.html" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-chfm-gray rounded">Services</a>
+                <a href="sectors.html" class="block px-3 py-2 text-white font-medium hover:bg-chfm-gray rounded">Sectors</a>
+                <a href="sustainability.html" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-chfm-gray rounded">Sustainability</a>
+                <a href="contact.html" class="block px-3 py-2 text-chfm-red font-semibold">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-20 bg-chfm-dark relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-chfm-black to-chfm-dark"></div>
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-chfm-red/10 to-transparent"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <h1 class="text-5xl lg:text-6xl font-black text-white mb-6">Sectors We <span class="gradient-text">Serve</span></h1>
+                <div class="w-24 h-1 bg-gradient-to-r from-chfm-red to-chfm-redDark rounded mb-8"></div>
+                <p class="text-xl text-gray-400 leading-relaxed">
+                    Specialised facilities management solutions designed for the unique requirements of public sector organisations.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sectors -->
+    <section class="py-20 bg-chfm-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="space-y-20">
+                <!-- Local Authorities -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop" alt="Local Authorities" class="rounded-2xl shadow-2xl border border-chfm-gray w-full">
+                    </div>
+                    <div class="order-1 lg:order-2 space-y-6">
+                        <div class="inline-flex items-center space-x-2 bg-chfm-red/20 border border-chfm-red/30 rounded-full px-4 py-2">
+                            <span class="w-2 h-2 bg-chfm-red rounded-full"></span>
+                            <span class="text-sm font-medium text-chfm-red">Public Sector</span>
+                        </div>
+                        <h2 class="text-3xl font-bold text-white">Local <span class="gradient-text">Authorities</span></h2>
+                        <p class="text-gray-400 leading-relaxed">
+                            We partner with local councils and government bodies to deliver comprehensive facilities management services that support public services and community infrastructure. Our solutions help local authorities maintain their property portfolios efficiently while meeting strict regulatory requirements and budget constraints.
+                        </p>
+                        <ul class="space-y-3 text-gray-400">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-chfm-red mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Civic building maintenance and management
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-chfm-red mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Public facility operations and upkeep
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-chfm-red mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Compliance and regulatory management
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-chfm-red mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Cost-effective service delivery
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Housing Associations -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <div class="inline-flex items-center space-x-2 bg-chfm-red/20 border border-chfm-red/30 rounded-full px-4 py-2">
+                            <span class="w-2 h-2 bg-chfm-red rounded-full"></span>
+                            <span class="text-sm font-medium text-chfm-red">Residential</span>
+                        </div>
+                        <h2 class="text-3xl font-bold text-white">Housing <span class="gradient-text">Associations</span></h2>
+                        <p class="text-gray-400 leading-relaxed">
+                            We provide tailored facilities management services to housing associations, ensuring that residential properties are maintained to the highest standards. Our focus is on creating safe, comfortable living environments while maximising the value of your housing stock and enhancing tenant satisfaction.
+                        </p>
+                        <ul class="space-y-3 text-gray-400">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-chfm-red mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Responsive repairs and maintenance
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-chfm-red mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Void property preparation and refurbishment
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-chfm-red mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Planned maintenance programmes
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-chfm-red mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Tenant liaison and support services
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop" alt="Housing Associations" class="rounded-2xl shadow-2xl border border-chfm-gray w-full">
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1">
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=600&fit=crop" alt="Education" class="rounded-2xl shadow-2xl border border-chfm-gray w-full">
+                    </div>
+                    <div class="order-1 lg:order-2 space-y-6">
+                        <div class="inline-flex items-center space-x-2 bg-chfm-red/20 border border-chfm-red/30 rounded-full px-4 py-2">
+                            <span class="w-2 h-2 bg-chfm-red rounded-full"></span>
+                            <span class="text-sm font-medium text-chfm-red">Education</span>
+                        </div>
+                        <h2 class="text-3xl font-bold text-white">Education <span class="gradient-text">Sector</span></h2>
+                        <p class="text-gray-400 leading-relaxed">
+                            We support schools, colleges, and universities with facilities management services that create optimal learning environments. Our services ensure educational institutions can focus on their core mission while we maintain safe, efficient, and inspiring facilities.
+                        </p>
+                        <ul class="space-y-3 text-gray-400">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-chfm-red mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                School building maintenance
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-chfm-red mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Grounds and estate management
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-chfm-red mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Health and safety compliance
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-chfm-red mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Summer works and projects
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Healthcare -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <div class="inline-flex items-center space-x-2 bg-chfm-red/20 border border-chfm-red/30 rounded-full px-4 py-2">
+                            <span class="w-2 h-2 bg-chfm-red rounded-full"></span>
+                            <span class="text-sm font-medium text-chfm-red">Healthcare</span>
+                        </div>
+                        <h2 class="text-3xl font-bold text-white">Healthcare <span class="gradient-text">Facilities</span></h2>
+                        <p class="text-gray-400 leading-relaxed">
+                            We provide specialised facilities management for healthcare environments, understanding the critical importance of maintaining safe, hygienic, and compliant facilities. Our services support the delivery of quality patient care through excellent estate management.
+                        </p>
+                        <ul class="space-y-3 text-gray-400">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-chfm-red mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Clinical environment maintenance
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-chfm-red mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Infection control compliance
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-chfm-red mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Critical systems maintenance
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-chfm-red mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                24/7 emergency response
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=800&h=600&fit=crop" alt="Healthcare" class="rounded-2xl shadow-2xl border border-chfm-gray w-full">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gradient-to-r from-chfm-red to-chfm-redDark">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-black text-white mb-6">Your Sector Not Listed?</h2>
+            <p class="text-xl text-red-100 mb-8">We provide facilities management solutions across multiple sectors. Contact us to discuss your specific requirements.</p>
+            <a href="contact.html" class="bg-white text-chfm-red px-8 py-4 rounded-lg font-bold text-lg transition-all transform hover:scale-105 shadow-xl inline-block">
+                Get in Touch
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-chfm-black border-t border-chfm-gray pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div class="col-span-2">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-br from-chfm-red to-chfm-redDark rounded-lg flex items-center justify-center">
+                            <span class="text-white font-black">CH</span>
+                        </div>
+                        <div>
+                            <span class="text-xl font-black text-white">CHFM</span>
+                            <span class="text-chfm-red font-semibold ml-1">GROUP</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        Trusted facilities management for local authorities and housing associations across the UK.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-chfm-red transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-chfm-red transition">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-chfm-red transition">Services</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-chfm-red transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contact</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li>Calder House, Calder Park</li>
+                        <li>Wakefield WF4 3BA</li>
+                        <li>info@chfmgroup.co.uk</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-chfm-gray pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm">&copy; 2026 CHFM Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
